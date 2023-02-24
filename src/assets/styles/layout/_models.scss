@@ -1,0 +1,61 @@
+.models {
+    padding-top: 5rem;
+    padding-bottom: 8.5rem;
+    position: relative;
+    z-index: 10;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: $fontPlayfair;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        margin-bottom: 1rem;
+        @media ($tablet) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__lookall {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: #444240;
+        text-decoration: none;
+        margin-bottom: .5rem;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &__line {
+            content: '';
+            width: 10.1rem;
+            border-bottom: 1px solid #C4C0B6;
+            margin-bottom: 2.5rem;
+            @media ($tablet) {
+            align-self: end;
+            }
+        }
+        @media ($tablet) {
+            align-self: end;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem 0;
+        @media ($tablet) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 0 3rem;
+        }
+    }
+}

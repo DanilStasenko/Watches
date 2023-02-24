@@ -1,0 +1,96 @@
+.header {
+    padding: 3rem 1rem;
+    @media (min-width: 1180px) {
+        padding: 3rem 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 1.92rem;
+        height: 1.92rem;
+    }
+
+    &__name {
+        font-family: $fontPlayfair;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        letter-spacing: 0.14em;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1rem;
+        @media ($tablet) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-gap: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: #555248;
+        text-align: center;
+        &:hover {
+            text-decoration: underline;
+        }
+        @media ($tablet) {
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        text-decoration: none;
+        font-size: 2rem;
+        color: $black;
+        font-weight: lighter;
+        &:not(:last-child) {
+            margin-right: 1rem;
+            @media ($tablet) {
+                margin-right: 2.5rem;
+            }
+        }
+        position: relative;
+        &:nth-child(2)::after {
+            content: '1';
+            position: absolute;
+            top: -.1rem;
+            right: -.6rem;
+            font-size: .8rem;
+            color: $black;
+            padding: .1rem .3rem;
+            border: 1px solid $pink;
+            background-color: $pink;
+            border-radius: 50%;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
